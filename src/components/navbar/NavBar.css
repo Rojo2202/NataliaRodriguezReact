@@ -1,0 +1,21 @@
+
+nav {
+    max-height: 25%;
+    background-color: #1A1E25;
+    color: #C299AC;
+    display: flex;
+    align-items: center;
+}
+.navbar-brand {
+    color: #C299AC;
+    font-size: 3rem;
+}
+
+#navbarNav {
+    display: flex;
+    justify-content: flex-end;
+}
+.nav-link {
+    color:#C299AC;  
+    font-size: 24px;
+}
