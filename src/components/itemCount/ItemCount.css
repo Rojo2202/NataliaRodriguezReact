@@ -1,0 +1,13 @@
+.box-count {
+    display: flex;
+    flex-direction: row;
+    max-width: 200px;
+}
+
+.box-count button {
+    background-color: purple;
+    border: none;
+    color: white;
+    margin: 0.2rem;
+    padding: 0.2rem;
+}

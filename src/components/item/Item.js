@@ -4,8 +4,10 @@
 
 //Modulos
 //Estilos
-import './Footer.css'
+import './Item.css'
 // Componentes
+import ItemCount from '../itemCount/ItemCount'
+
 // Core
 
 /*#############################################
@@ -13,18 +15,20 @@ import './Footer.css'
 ###############################################*/
 
 
-const Footer = () => {
+const Item = ( props ) => {
 
+    const {title,category,description,price,image} = props.data
 
     return (
-        <footer>
-            <p>Seguinos en nuestras redes sociales</p>
-            <ul className='redes-sociales'>
-                <li><i class="fa-brands fa-facebook"></i></li>
-                <li><i class="fa-brands fa-instagram"></i></li>
-                <li><i class="fa-brands fa-whatsapp"></i></li>
-            </ul>
-        </footer>
+        <div>
+
+            <p>{title}</p>
+            <p>{price}</p>
+            <p>{description}</p>
+            <p>{category}</p>
+            <img src={image} alt = {description}/>
+            <ItemCount stock = "10"></ItemCount>
+        </div>
     )
 }
 
@@ -33,4 +37,4 @@ const Footer = () => {
         Exportaciones
 ###############################################*/
 
-export default Footer
+export default Item

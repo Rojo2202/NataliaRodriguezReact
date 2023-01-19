@@ -13,6 +13,7 @@ import './index.css';
 // import App from './App';
 import NavBar from './components/navbar/NavBar.js';
 import ItemListContainer from './components/itemListContainer/ItemListContainer.js';
+import Footer from './components/footer/Footer';
 // Core
 import reportWebVitals from './reportWebVitals';
 
@@ -25,6 +26,7 @@ root.render(
   <React.StrictMode>
     <NavBar />
     <ItemListContainer greeting = "ItemListContainer"/>
+    <Footer/>
   </React.StrictMode>
 );
 

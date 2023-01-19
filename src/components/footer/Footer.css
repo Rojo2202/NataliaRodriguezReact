@@ -1,0 +1,31 @@
+.redes-sociales {
+    
+    list-style: none;
+    font-size: 6rem;
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+    background-color: #1A1E25
+}
+
+.redes-sociales li i {
+    margin: 0;
+    padding: 0;
+}
+
+.redes-sociales li i:hover{
+    color: #C299AC;
+    transition: 1s;
+}
+
+footer {
+    background-color: #1A1E25;
+    width: 100%;
+
+}
+
+footer p {
+    color: #C299AC;
+    text-align: center;
+    font-size: 3rem;
+}
