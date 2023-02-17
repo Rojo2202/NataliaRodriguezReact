@@ -1,0 +1,23 @@
+
+
+
+.card-item {
+    width: 18rem;
+    height: 30rem;
+    margin-bottom: 6px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    justify-items: center;
+    padding: 20px;
+    
+}
+
+#img-card{
+    /* width: 10rem; */
+    max-height: 12rem;
+    max-width: 75%;
+    
+}

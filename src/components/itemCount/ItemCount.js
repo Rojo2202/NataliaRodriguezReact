@@ -21,6 +21,8 @@ const ItemCount = ( props ) => {
     const disOne = () => {
         if ( count > 0 ) {
             setCount( count - 1 );
+            props.cantidades(count)
+
             console.log(count)
         }
 
@@ -29,6 +31,7 @@ const ItemCount = ( props ) => {
     const addOne = () => {
         if ( count < props.stock ) {
             setCount( count + 1);
+            props.cantidades(count)
         }
         else {
             console.log( 'No hay mas stock' );

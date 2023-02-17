@@ -3,12 +3,12 @@
 ###############################################*/
 
 //Modulos
-import { useState, useEffect} from 'react';
+import { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
 //Estilos
-import './ItemList.css'
+import './ItemDetailContainer.css'
 // Componentes
-import Item from '../item/Item'
-import { Row } from 'react-bootstrap';
+import ItemDetail from '../itemDetail/ItemDetail'
 // Core
 /*#############################################
         Logica
@@ -18,22 +18,23 @@ import { Row } from 'react-bootstrap';
 
 
 
-const ItemList = () => {
+const ItemDetailContainer = () => {
 
     const [produc, setProduc] = useState([])
 
-    useEffect(()=>{
-        fetch('https://fakestoreapi.com/products')
-            .then(res => res.json())
-            .then(json => setProduc(json.map( prod => <Item key = {prod.id} id = { "producto" + prod.id } data = {prod}/>)))
-    },[]) 
-    
 
+
+    const {productoId} = useParams();
+    useEffect(()=>{
+        fetch(`https://fakestoreapi.com/products/${productoId}`)
+            .then(res => res.json())
+            .then(prod => setProduc(<ItemDetail key = {prod.id} id = {prod.id } data = {prod}/>))
+    },[productoId]) 
 
     return (
-        <Row>
+        <div>
             {produc}
-        </Row>
+        </div>
     )
 }
 
@@ -42,4 +43,4 @@ const ItemList = () => {
         Exportaciones
 ###############################################*/
 
-export default ItemList
+export default ItemDetailContainer

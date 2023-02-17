@@ -1,11 +1,18 @@
-
-nav {
-    max-height: 25%;
+.navbar {
+    height: 20vh;
+    max-height: 20vh;
     background-color: #1A1E25;
     color: #C299AC;
     display: flex;
     align-items: center;
+    margin-bottom: 6px;
 }
+
+.logo {
+    height: 16rem;
+    width: auto;
+}
+
 .navbar-brand {
     color: #C299AC;
     font-size: 3rem;
@@ -18,4 +25,10 @@ nav {
 .nav-link {
     color:#C299AC;  
     font-size: 24px;
+}
+
+.nav-link:hover {
+    border-bottom: 2px #C299AC solid;
+    border-radius: 2px;
+    color: #C299AC;
 }

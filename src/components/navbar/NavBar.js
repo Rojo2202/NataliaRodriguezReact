@@ -7,8 +7,13 @@
 import "./NavBar.css";
 // Componentes
 import CartWidget from "../cartWidget/CartWidget.js";
-// Core
-
+import { Link } from "react-router-dom";
+// LOGO
+import logo from '../../assets/img/logo.png'
+// Boostrap
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 /*#############################################
         Logica
 ###############################################*/
@@ -16,44 +21,24 @@ import CartWidget from "../cartWidget/CartWidget.js";
 const NavBar = () => {
   return (
     <header>
-      <nav className="navbar navbar-expand-lg">
-        <div className="container-fluid">
-          <a className="navbar-brand" href="#">
-          Logo
-          </a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav">
-              <li className="nav-item">
-                <a className="nav-link" aria-current="page" href="#">
-                  Home
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Tienda
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                <CartWidget contador="0" />
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      
+      <Navbar expand="lg" className="navbar">
+      <Container>
+        <Navbar.Brand href="#home">
+        <img
+              src={logo}
+              className="d-inline-block align-top logo"
+              alt="React Bootstrap logo"
+            />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" id = "navbarNav "/>
+        <Navbar.Collapse id="basic-navbar-nav " >
+          <Nav className="me-auto">
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/productos">Productos</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
     </header>
   );
 };

@@ -9,6 +9,7 @@ import { useState } from 'react'
 import './ItemListContainer.css'
 // Componentes
 import ItemList from '../itemList/ItemList'
+import { Container, Row } from 'react-bootstrap';
 
 // Core
 
@@ -30,12 +31,14 @@ const ItemListContainer = () => {
         setCategoria('Construccion');
     }
     return (
-        <div className='main-section'>
+        <div className='main-sectio container'>
                 <button onClick={categoriaHogar}>Hogar</button>
                 <button onClick={categoriaConstruccion}>Construccionr</button>
                 <button onClick={categoriaAll}>Todo</button>
-                <p>ItemListContainer</p>
-                <ItemList categoria = {categoria}/> 
+                <Container>
+                        <ItemList categoria = {categoria}/> 
+                </Container>
+                
         </div>
                 
         )

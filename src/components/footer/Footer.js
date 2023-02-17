@@ -17,7 +17,7 @@ const Footer = () => {
 
 
     return (
-        <footer>
+        <footer className='container-fluid'>
             <p>Seguinos en nuestras redes sociales</p>
             <ul className='redes-sociales'>
                 <li><i class="fa-brands fa-facebook"></i></li>
